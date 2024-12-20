@@ -14,9 +14,35 @@
         .full-height {
             height: 50vh;
         }
+        /* Tam ekran overlay */
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 1); /* Arka planı beyaz yap */
+            z-index: 9999; /* Diğer her şeyin üstünde olsun */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Sayfa yüklendiğinde overlay gizlenecek */
+        body.loading #loadingOverlay {
+            display: flex;
+        }
+
+        body:not(.loading) #loadingOverlay {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Loading Ekranı -->
+    <div id="loadingOverlay">
+        <img src="/images/loading.gif" alt="Loading..." />
+    </div>
+
     <div class="container-fluid vh-100 d-flex flex-column">
         <!-- Row 1 -->
         <div class="row flex-grow-1 full-height">
@@ -35,40 +61,38 @@
             <div class="col-6 d-flex justify-content-center align-items-center">
             </div>
             <div class="col-6 d-flex justify-content-center align-items-center">
-    <!-- Login Form -->
-    <form method="post" action="@Url.Action("Login", "Home")" id="loginForm" class="w-75">
+                <!-- Login Form -->
+                <form method="post" action="@Url.Action("Login", "Home")" id="loginForm" class="w-75">
+                    <!-- Kullanıcı Adı -->
+                    <div class="form-group mb-3">
+                        <label for="loginInput">Kullanıcı Adı veya Email</label>
+                        <input type="text" id="loginInput" name="loginInput" class="form-control" placeholder="Kullanıcı adı veya email adresinizi girin" required />
+                    </div>
 
-        <!-- Kullanıcı Adı -->
-        <div class="form-group mb-3">
-            <label for="loginInput">Kullanıcı Adı veya Email</label>
-            <input type="text" id="loginInput" name="loginInput" class="form-control" placeholder="Kullanıcı adı veya email adresinizi girin" required />
-        </div>
+                    <!-- Şifre -->
+                    <div class="form-group mb-3">
+                        <label for="password">Şifre</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifrenizi girin" required />
+                    </div>
 
-        <!-- Şifre -->
-        <div class="form-group mb-3">
-            <label for="password">Şifre</label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Şifrenizi girin" required />
-        </div>
+                    <!-- Beni Hatırla -->
+                    <div class="form-group mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" id="rememberMe" name="rememberMe" value="true" class="form-check-input" />
+                            <label for="rememberMe" class="form-check-label">Beni Hatırla</label>
+                        </div>
+                    </div>
 
-        <!-- Beni Hatırla -->
-        <div class="form-group mb-3">
-            <div class="form-check">
-                <input type="checkbox" id="rememberMe" name="rememberMe" value="true" class="form-check-input" />
-                <label for="rememberMe" class="form-check-label">Beni Hatırla</label>
+                    <!-- Giriş Yap Butonu -->
+                    <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <div class="error-message text-center text-danger mt-3">
+                            @ViewBag.ErrorMessage
+                        </div>
+                    }
+                </form>
             </div>
-        </div>
-
-        <!-- Giriş Yap Butonu -->
-        <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
-    </form>
-
-    @if (ViewBag.ErrorMessage != null)
-    {
-        <div class="error-message text-center text-danger mt-3">
-            @ViewBag.ErrorMessage
-        </div>
-    }
-</div>
         </div>
     </div>
     <!-- Bootstrap JS ve jQuery -->
@@ -97,7 +121,13 @@
                 }
             });
         });
+            document.addEventListener("DOMContentLoaded", function () {
+                // Sayfa tamamen yüklendiğinde loading sınıfını kaldır
+                document.body.classList.remove("loading");
+            });
+
+            // Yüklenirken loading sınıfını ekle
+            document.body.classList.add("loading");
     </script>
 </body>
 </html>
-

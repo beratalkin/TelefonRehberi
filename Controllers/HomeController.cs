@@ -69,6 +69,7 @@ namespace TelefonRehberi.Controllers
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> Logout()
         {
             // Kullanýcýyý çýkart

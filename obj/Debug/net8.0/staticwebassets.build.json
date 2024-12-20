@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h5Wgwe5p+PcybduUgnWXPP0MFo8PJAD2+m9r4lNaD6M=",
+  "Hash": "gjixU2So/sIjTf+cPElsh1ZhVnZsx4vbTOAT8Dv23e8=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\berat\\Desktop\\TelefonRehberi\\WebApplication1\\wwwroot\\images\\loading.gif",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\berat\\Desktop\\TelefonRehberi\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "images/loading#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "342kdfpjjk",
+      "Integrity": "s2A1n/59RtMjKbakVLBUDm00vURKb57PrOZmPhy5iro=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\loading.gif"
     },
     {
       "Identity": "C:\\Users\\berat\\Desktop\\TelefonRehberi\\WebApplication1\\wwwroot\\js\\site.js",
@@ -1481,6 +1502,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/loading.342kdfpjjk.gif",
+      "AssetFile": "C:\\Users\\berat\\Desktop\\TelefonRehberi\\WebApplication1\\wwwroot\\images\\loading.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s2A1n/59RtMjKbakVLBUDm00vURKb57PrOZmPhy5iro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Dec 2024 11:24:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "342kdfpjjk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/loading.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s2A1n/59RtMjKbakVLBUDm00vURKb57PrOZmPhy5iro="
+        }
+      ]
+    },
+    {
+      "Route": "images/loading.gif",
+      "AssetFile": "C:\\Users\\berat\\Desktop\\TelefonRehberi\\WebApplication1\\wwwroot\\images\\loading.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s2A1n/59RtMjKbakVLBUDm00vURKb57PrOZmPhy5iro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Dec 2024 11:24:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s2A1n/59RtMjKbakVLBUDm00vURKb57PrOZmPhy5iro="
         }
       ]
     },

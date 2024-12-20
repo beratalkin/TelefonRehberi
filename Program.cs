@@ -33,8 +33,8 @@ app.UseStaticFiles();
 
 // Kimlik doðrulama ve yetkilendirme middleware'lerini ekle
 app.UseRouting();
-app.UseAuthentication();  // Kimlik doðrulama (authentication) middleware'ini ekleyin
-app.UseAuthorization();   // Yetkilendirme (authorization) middleware'ini ekleyin
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Ana yönlendirme
 app.MapControllerRoute(
